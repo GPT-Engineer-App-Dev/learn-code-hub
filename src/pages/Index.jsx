@@ -1,5 +1,5 @@
 import { Container, Text, VStack, Heading, Box, Button } from "@chakra-ui/react";
-import { FaCode, FaLaptopCode, FaChalkboardTeacher, FaBook, FaList } from "react-icons/fa";
+import { FaCode, FaBook, FaList } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Index = () => {
@@ -18,6 +18,9 @@ const Index = () => {
           </Button>
           <Button as={Link} to="/enrollments" leftIcon={<FaList />} colorScheme="blue" variant="solid" size="lg">
             My Enrollments
+          </Button>
+          <Button as={Link} to="/code-editor" leftIcon={<FaCode />} colorScheme="purple" variant="solid" size="lg">
+            Code Editor
           </Button>
         </Box>
       </VStack>
