@@ -1,5 +1,6 @@
 import { Container, Text, VStack, Heading, Box, Button } from "@chakra-ui/react";
-import { FaCode, FaLaptopCode, FaChalkboardTeacher } from "react-icons/fa";
+import { FaCode, FaLaptopCode, FaChalkboardTeacher, FaBook, FaList } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   return (
@@ -12,14 +13,11 @@ const Index = () => {
           Your ultimate online learning platform for coding.
         </Text>
         <Box display="flex" justifyContent="space-around" width="100%" mt={10}>
-          <Button leftIcon={<FaCode />} colorScheme="teal" variant="solid" size="lg">
-            Learn to Code
+          <Button as={Link} to="/courses" leftIcon={<FaBook />} colorScheme="teal" variant="solid" size="lg">
+            View Courses
           </Button>
-          <Button leftIcon={<FaLaptopCode />} colorScheme="blue" variant="solid" size="lg">
-            Practice Coding
-          </Button>
-          <Button leftIcon={<FaChalkboardTeacher />} colorScheme="purple" variant="solid" size="lg">
-            Get Mentorship
+          <Button as={Link} to="/enrollments" leftIcon={<FaList />} colorScheme="blue" variant="solid" size="lg">
+            My Enrollments
           </Button>
         </Box>
       </VStack>
